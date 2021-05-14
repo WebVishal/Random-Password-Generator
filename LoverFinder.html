@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lover Finder in 2021</title>
+    <style>
+
+
+body {
+    
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+
+}
+h1{
+    text-align: center;
+}
+
+.Lover{
+
+   background-color: chartreuse;
+    padding: 3rem;
+    border-radius: 1rem;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+Form {
+    display: grid;
+    grid-template-columns: auto ;
+    row-gap: 1rem;
+    column-gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.btn {
+    margin-top: 1.5rem;
+    grid-column: span 1;
+    background-color: transparent;
+    border: 2px solid black;
+    font-weight: bold;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+}
+
+.btn:hover {
+
+    border: solid red;
+    transform: scaleY(2);
+    background-color: transparent;
+    color: red;
+    font-weight: bold;
+
+}
+.input{
+  padding: 1rem;
+    border: 1px solid #333;
+    height: 1rem;
+    margin: 5px;
+    width: 350px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    text-align: center;
+}
+.result{
+    background-color: white;
+    color: red;
+    padding: 1rem;
+    border: 1px solid #333;
+    height: 1rem;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+}
+legend{
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="Lover">
+     <h1> Your Life Partner Finder </h1>
+    
+    <form action="" id="form">
+        <input type="text" class="input" placeholder="Enter Your Name" required>
+        v/s
+        <h3 class="result" id="resultEl"> Result</h3>
+    
+       
+        <legend for="" id="gender">Gender <br>
+           
+            <input type="radio" id="male" name="gender" value="male" >
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female" >
+            <label for="female">Female</label><br>
+          
+        </legend>
+
+        <button type="submit" class="btn">Lover Finder</button>
+    </form>
+</div>
+
+<script>
+
+
+const Input = document.getElementById("input");
+const  Gender = document.getElementById("gender");
+const Male = document.getElementById("male");
+const Female = document.getElementById("female");
+const Form = document.getElementById("form");
+const Result = document.getElementById("resultEl");
+
+Form.addEventListener('submit', e=>{
+
+    e.preventDefault();
+    let result= LoverFinder();
+
+    Result.innerText=result;
+
+    //console.log(result);
+
+})
+
+
+function LoverFinder(){
+
+    let MaleEl = Male.checked;
+    let FemaleEl= Female.checked;
+    let GenderEl = Gender.value;
+
+    if(GenderEl = MaleEl){
+        let MaleLoversName = "Neha Monika Kajal Shivani Koshlya Estaa Eshika Ekiya Forum Falak Geetika Gulika Ishani Idika Jeevika Jiera Kashvi Krisha Kalki Laasya Lekha Mihika Maira Nyra Oorvi Oishi Pihu Prisha Ridhi Rabhya Saira Shravya Turvi Yashic";
+    let MaleLoversNameEl= MaleLoversName.split(" ");
+           
+       return MaleLoversNameEl[Math.floor(Math.random()*MaleLoversNameEl.length)]
+ 
+    }
+
+    if(GenderEl=FemaleEl)
+    {
+        let FemaleLoversName = "Ajay ShikharDhawan RohitSharma ViratKohli KedarJadhav VijayShankar DineshKarthik HardikPandya Vishal Govind Rajkumar MsDhoni Aadi Aarav Aarnav Aarush Abdul Abeer Abhimanyu Abhiramnew Ayush Brijesh Balhaar Balvan Balvee ";
+         let FemaleNameEl= FemaleLoversName.split(" ");
+        return FemaleNameEl[Math.floor(Math.random()*FemaleNameEl.length)];
+    }
+    
+
+}
+
+
+</script>
+
+
+
+
+</body>
+</html>
+
+
+

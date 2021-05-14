@@ -1,0 +1,103 @@
+
+body {
+    background-image: url("Images/Heart.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+
+}
+
+.LoveCalculator{
+    background-image: url("Images/Love\ heart.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem;
+    border-radius: 1rem;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Form {
+    display: grid;
+    grid-template-columns: auto ;
+    row-gap: 1rem;
+    column-gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.Psw {
+    background-color: white;
+    color: red;
+    padding: 1rem;
+    border: 1px solid #333;
+    height: 1rem;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-break: break-all;
+    border-radius: 5rem;
+}
+
+.btn {
+    margin-top: 1rem;
+    grid-column: span 1;
+    background-color: transparent;
+    border: 2px solid black;
+    font-weight: bold;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+}
+
+.btn:hover {
+
+    border: solid red;
+    transform: scaleY(2);
+    background-color: transparent;
+    color: red;
+    font-weight: bold;
+
+}
+.Deatils{
+
+    padding: 2rem;
+    height: 2rem;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+   align-items: center;
+   border-radius: 5rem;
+
+}
+
+.input{
+  padding: 1rem;
+    border: 1px solid #333;
+    height: 1rem;
+    margin: 5px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    text-align: center;
+}
+
+label{
+display: flex;
+justify-content: center;
+align-items: center;
+}

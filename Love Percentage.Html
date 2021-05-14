@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Percentage Genarator</title>
+    <link rel="stylesheet" href="Love Percentage.css">
+
+</head>
+
+<body  >
+    <!-- <nav>
+        <div> Home</div>
+        <div> About</div>
+        <div> Contact</div>
+    </nav> -->
+
+    <div class="LoveCalculator" >
+        <h1> Love Calculator </h1>
+        <h6 class="Psw" id="result"> <b>Please! Enter some details below </b> </h6>
+        <form action="" class="Form" id="LoveGenarator" >
+            <div class=" Deatils">
+                <input type="text" class="input" id="Name" placeholder="Your Name" required>
+                <input type="text" class="input" id="LastName" placeholder="Partner Name" required>
+
+            </div>
+            <!-- <label for="">Select Your Gender</label>
+            <input type="radio">Male
+            <input type="radio">Female
+            <label for="">Select Your Partner Gender</label>
+            <input type="radio">Male
+            <input type="radio">Female -->
+
+            <button type="submit" class="btn"  > Love Genarator</button>
+        </form>
+
+    </div>
+
+    <footer>
+        
+    </footer>
+    <script>
+
+        const Result = document.getElementById('result');
+        const Form = document.getElementById('LoveGenarator')
+
+
+
+
+        Form.addEventListener('submit', e => {
+
+            e.preventDefault();
+            let resultEl = love();
+            Result.innerText = resultEl + "%";
+            
+            
+
+        })
+
+        function love() {
+
+            return Math.floor(Math.random() * 100);
+        }
+
+
+    </script>
+</body>
+
+</html>
